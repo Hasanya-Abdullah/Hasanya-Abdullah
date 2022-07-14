@@ -1,4 +1,9 @@
 Arabic Speech to text recognition:
+
+Notes:
+-You can download the code from the (speech to text AR.py) file.
+-After you run the code say something then wait for a bit for the text to appear (after the text appears, you need to run the code one more time if you want your speech to get recognized again). 
+
 instructions:
 1-Open Jubyter Notebook and create a new file.
 2-Install the required libraries by typing the two lines below:
@@ -36,9 +41,7 @@ except sr.RequestError as R:
 
 The variable t holds the text that got extracted from the audio variable through the recognizer in Arabic language.
 
-Note:
--You can copy the code from the (speech to text AR.py) file.
--After you run the code say somtheing then wait for a bit for the text to appear.
+
 
 
    
