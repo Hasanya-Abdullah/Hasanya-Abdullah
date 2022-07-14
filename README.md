@@ -8,6 +8,7 @@ Notes:
 instructions:
 
 1-Open Jubyter Notebook and create a new file.
+
 2-Install the required libraries by typing the two lines below:
 
  !pip install speechrecognition
@@ -32,17 +33,22 @@ The Pyaudio library allows you to record sounds.
     audio=r.listen(src)
     
 The first line informs the user to start speaking.
+
 In the second line, the r (recognizer) will listen to the source (the user sound).
 
 5-Lastly, type these 7 lines:
 
  try:
     t=r.recognize_google(audio,language='ar-AR')
+				
     print(t)
     
 except sr.UnknownValueError as U:
+
     print(U)
+				
 except sr.RequestError as R:
+
     print(R)
 
 The variable t holds the text that got extracted from the audio variable through the recognizer in Arabic language.
