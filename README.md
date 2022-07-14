@@ -1,10 +1,53 @@
-- 👋 Hi, I’m @Hasanya-Abdullah
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+Arabic Speech to text recognition:
+instructions:
+1-Open Jubyter Notebook and create a new file.
+2-Install the required libraries by typing the two lines below:
+ !pip install speechrecognition
+ !pip install pyAudio
+ 
+The Speechrecognition library acts like a cover for sevral APIs that are built for speech recognition.
+The Pyaudio library allows you to record sounds.
 
-<!---
-Hasanya-Abdullah/Hasanya-Abdullah is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+3- Type the following three lines:
+   import  speech_recognition as sr
+   r=sr.Recognizer()
+   with sr.Microphone() as src:
+   
+   sr is a short for speech recognition.
+   r is the recognizer variable.
+   src is a short for the source which is the audio that the micorophone will catch.
+
+4-Write the two lines of code below:
+    print('قل شيئاً..')
+    audio=r.listen(src)
+    
+The first line informs the user to start speaking.
+In the second line, the r (recognizer) will listen to the source (the user sound).
+
+5-Lastly, type these 7 lines:
+ try:
+    t=r.recognize_google(audio,language='ar-AR')
+    print(t)
+    
+except sr.UnknownValueError as U:
+    print(U)
+except sr.RequestError as R:
+    print(R)
+
+The variable t holds the text that got extracted from the audio variable through the recognizer in Arabic language.
+
+Note:
+-You can copy the code from the (speech to text AR.py) file.
+-After you run the code say somtheing then wait for a bit for the text to appear.
+
+
+   
+
+ 
+ 
+
+
+
+
+
+
